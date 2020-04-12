@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Mission to Mars</title>
+</head>
+<body = "margin: 20px">
+ <div class="container">
+    <div class="jumbotron text-center">
+    <h1>Mission to Mars </h1>
+    <p><a class="btn btn-primary btn-md" href="/" role="button">Scrape New Data</a></p>
+ </div> 
+ <div class="row">
+    <div class="col-md-12"/>
+        <h3>Latest Mars News</h3>
+            <h4>{{ mars_info_scrape.title_results}}</h4>
+                <p>{{ mars_info_scrape.article_teaser }}</p>
+    </div> 
+ </div> 
+ <div class="row">
+    <div class="col-md-12"/>
+        <h3>Mars Space Images - Featured Image </h3>
+            <img src="{{ mars_info_scrape.image_path}}" alt = "Featured Image" >
+    </div>
+    <div class="col-md-12"/>
+        <h4>Latest Mars Weather Tweet</h4>
+            <p>{{ mars_info_scrape.current_weather_tweet}}</p>
+    </div> 
+    <div class="col-md-12"/>
+        <h4>Mars Fact</h4>
+            <p>{{mars_info_scrape.mars_facts_html}}</p>
+    </div> 
+    <div class="col-md-12"/>
+        <h4>Mars Hemispheres</h4>
+        <p>{mars_info_scrape.hemisphere_image_urls}}</p>
+    </div> 
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
